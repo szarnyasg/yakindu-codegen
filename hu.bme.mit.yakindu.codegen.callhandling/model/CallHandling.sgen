@@ -1,0 +1,14 @@
+GeneratorModel for yakindu::java {
+
+	statechart CallHandling {
+
+		feature Outlet {
+			targetProject = "hu.bme.mit.yakindu.codegen.callhandling"
+			targetFolder = "src"
+		}
+
+		feature GeneralFeatures {
+			TimerService = true
+		}
+	}
+}
