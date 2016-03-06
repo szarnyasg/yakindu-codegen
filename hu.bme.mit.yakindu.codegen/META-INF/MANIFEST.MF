@@ -8,6 +8,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.yakindu.sct.generator.genmodel;bundle-version="2.5.0",
  org.yakindu.sct.generator.java;bundle-version="2.5.0",
- org.yakindu.sct.model.stext;bundle-version="2.5.0"
+ org.yakindu.sct.model.stext;bundle-version="2.5.0",
+ org.yakindu.sct.domain;bundle-version="2.5.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
