@@ -43,7 +43,6 @@ public class YakinduCodeGeneratorApplication implements IApplication {
 	private IProject setupProject() throws CoreException, Exception {
 		final IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
 		final String projectFile = workspaceRoot.getRawLocation() + "/" + myBundleName + "/.project";
-		System.out.println(projectFile);
 		final IProjectDescription projectDescription = ResourcesPlugin.getWorkspace()
 				.loadProjectDescription(new Path(projectFile));
 		final IProject project = workspaceRoot.getProject(projectDescription.getName());
