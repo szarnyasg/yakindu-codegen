@@ -11,6 +11,7 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IWorkspaceRoot;
+import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Path;
@@ -93,11 +94,13 @@ public class YakinduCodeGeneratorApplication implements IApplication {
 			throw new IOException("File " + SGEN_RELATIVE_PATH + " does not exist!");
 		}
 
+		ResourcesPlugin.getWorkspace().build(IncrementalProjectBuilder.FULL_BUILD, null);
+
 		System.out.println("Generating code from file: " + sgenFile.getRawLocationURI());
 		generatorExecutor.executeGenerator(sgenFile);
 		System.out.println("Code generation finished.");
-		
-		Thread.sleep(2000); 
+
+		Thread.sleep(2000);
 	}
 
 }
