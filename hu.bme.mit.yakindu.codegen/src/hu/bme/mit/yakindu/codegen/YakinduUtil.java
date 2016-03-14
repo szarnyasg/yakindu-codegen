@@ -13,7 +13,6 @@ import org.yakindu.sct.model.sgraph.Statechart;
 
 public class YakinduUtil {
 
-	
 	private String statechartBundleName;
 	private String sgenRelativePath;
 	private String sctRelativePath;
@@ -23,7 +22,7 @@ public class YakinduUtil {
 		this.sgenRelativePath = sgenRelativePath;
 		this.sctRelativePath = sctRelativePath;
 	}
-
+	
 	public void loadSgen() {
 		Resource sgenResource = loadResource(getWorkspaceFileFor(sgenRelativePath));
 		GeneratorModel model = (GeneratorModel) sgenResource.getContents().get(0);
