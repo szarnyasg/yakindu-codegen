@@ -99,7 +99,7 @@ public class YakinduCodeGeneratorApplication implements IApplication {
 		generatorExecutor.executeGenerator(sgenFile);
 		System.out.println("Code generation finished.");
 
-		Thread.sleep(2000);
+		ResourcesPlugin.getWorkspace().save(true, null);
 	}
 
 }
