@@ -22,8 +22,8 @@ public class YakinduCodeGeneratorApplication implements IApplication {
 			final ProjectUtil projectUtil = new ProjectUtil(STATECHART_BUNDLE_NAME); 
 			projectUtil.setupProject();
 
-			final YakinduUtil yakinduUtil = new YakinduUtil(STATECHART_BUNDLE_NAME, SGEN_RELATIVE_PATH, SCT_RELATIVE_PATH);
-			yakinduUtil.loadSgen();
+			final YakinduCodeGenerator yakinduCogeGenerator = new YakinduCodeGenerator(STATECHART_BUNDLE_NAME, SGEN_RELATIVE_PATH, SCT_RELATIVE_PATH);
+			yakinduCogeGenerator.loadSgen();
 			
 			ResourcesPlugin.getWorkspace().save(true, new NullProgressMonitor());
 		} catch (final Exception e) {

@@ -11,13 +11,13 @@ import org.yakindu.sct.generator.core.GeneratorExecutor;
 import org.yakindu.sct.model.sgen.GeneratorModel;
 import org.yakindu.sct.model.sgraph.Statechart;
 
-public class YakinduUtil {
+public class YakinduCodeGenerator {
 
 	private String statechartBundleName;
 	private String sgenRelativePath;
 	private String sctRelativePath;
 
-	public YakinduUtil(String statechartBundleName, String sgenRelativePath, String sctRelativePath) {
+	public YakinduCodeGenerator(String statechartBundleName, String sgenRelativePath, String sctRelativePath) {
 		this.statechartBundleName = statechartBundleName;
 		this.sgenRelativePath = sgenRelativePath;
 		this.sctRelativePath = sctRelativePath;
