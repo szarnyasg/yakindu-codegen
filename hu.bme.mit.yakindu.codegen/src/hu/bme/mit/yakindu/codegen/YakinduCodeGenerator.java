@@ -23,15 +23,15 @@ public class YakinduCodeGenerator {
 		this.sctRelativePath = sctRelativePath;
 	}
 	
-	public void loadSgen() {
+	public void generate() {
 		Resource sgenResource = loadResource(getWorkspaceFileFor(sgenRelativePath));
 		GeneratorModel model = (GeneratorModel) sgenResource.getContents().get(0);
-		model.getEntries().get(0).setElementRef(getStatechart(sctRelativePath));
+		model.getEntries().get(0).setElementRef(getStatechart());
 		new GeneratorExecutor().executeGenerator(model);
 	}
 
-	public Statechart getStatechart(final String sctLocation) {
-		IPath path = getWorkspaceFileFor(sctLocation).getFullPath();
+	public Statechart getStatechart() {
+		IPath path = getWorkspaceFileFor(sctRelativePath).getFullPath();
 		IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
 		Resource resource = loadResource(file);
 		return (Statechart) resource.getContents().get(0);

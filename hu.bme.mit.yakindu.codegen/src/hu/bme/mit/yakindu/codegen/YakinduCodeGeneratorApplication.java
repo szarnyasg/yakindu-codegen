@@ -23,7 +23,7 @@ public class YakinduCodeGeneratorApplication implements IApplication {
 			projectUtil.setupProject();
 
 			final YakinduCodeGenerator yakinduCogeGenerator = new YakinduCodeGenerator(STATECHART_BUNDLE_NAME, SGEN_RELATIVE_PATH, SCT_RELATIVE_PATH);
-			yakinduCogeGenerator.loadSgen();
+			yakinduCogeGenerator.generate();
 			
 			ResourcesPlugin.getWorkspace().save(true, new NullProgressMonitor());
 		} catch (final Exception e) {
